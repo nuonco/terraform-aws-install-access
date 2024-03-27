@@ -11,7 +11,8 @@ You can use the following module invocation in any Terraform project:
 
 ```hcl
 module "iam-role" {
-  source = "github.com/nuonco/sandboxes//iam-role"
+  source = "nuonco/install-access/aws"
+  version = "1.0.0"
 
   sandbox = "aws-ecs"
   prefix = "iam-role-prefix"
