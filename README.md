@@ -1,4 +1,3 @@
-=======
 # IAM-Role Module
 
 This modules provisions an IAM role for sandbox, granting access to create Nuon installs.
