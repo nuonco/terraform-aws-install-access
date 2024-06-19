@@ -12,7 +12,7 @@ module "iam_role" {
   role_name   = local.iam_role_name
 
   allow_self_assume_role   = true
-  custom_role_trust_policy        = data.http.sandbox_trust_policy.response_body
+  custom_role_trust_policy        = data.aws_iam_policy_document.trust_policy.json
   create_custom_role_trust_policy = true
   custom_role_policy_arns = [
     aws_iam_policy.deprovision.arn,

@@ -22,3 +22,8 @@ variable "branch" {
   default = "main"
   description = "branch to load permissions from"
 }
+
+variable "delegation_role_arn" {
+  type = string
+  description = "Delegation role to create access for"
+}
