@@ -13,7 +13,7 @@ locals {
   ]
 
   nuon_principals    = var.enable_support_access ? concat(local.default_principals, local.support_principals) : local.default_principals
-  trusted_principals = var.delegation_role_arn ? [var.delegation_role_arn] : local.nuon_principals
+  trusted_principals = var.delegation_role_arn != "" ? [var.delegation_role_arn] : local.nuon_principals
 }
 
 data "aws_iam_policy_document" "trust_policy" {
