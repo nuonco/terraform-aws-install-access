@@ -1,24 +1,34 @@
 variable "prefix" {
-  type = string
+  type        = string
   description = "prefix for IAM role and policies"
 }
 
 variable "sandbox" {
-  type = string
+  type        = string
   description = "sandbox to use"
   validation {
-      condition     = contains([
+    condition = contains([
       "aws-ecs",
       "aws-ecs-byovpc",
       "aws-eks",
       "aws-eks-byovpc",
-      ], var.sandbox)
-      error_message = "${var.sandbox} is not a valid sandbox"
-    }
+    ], var.sandbox)
+    error_message = "${var.sandbox} is not a valid sandbox"
+  }
 }
 
 variable "branch" {
-  type = string
-  default = "main"
+  type        = string
+  default     = "main"
   description = "branch to load permissions from"
+}
+
+variable "delegation_role_arn" {
+  type        = string
+  description = "Delegation role to create access for"
+}
+
+variable "enable_support_access" {
+  type        = bool
+  description = "Grant access to additional Nuon accounts for debugging support"
 }
