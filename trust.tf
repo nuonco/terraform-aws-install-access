@@ -17,7 +17,7 @@ data "aws_iam_policy_document" "trust_policy" {
     actions = ["sts:AssumeRole", ]
 
     principals {
-      type = "AWS"
+      type        = "AWS"
       identifiers = local.trusted_principals
     }
   }
