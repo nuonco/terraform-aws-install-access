@@ -27,3 +27,8 @@ variable "delegation_role_arn" {
   type        = string
   description = "Delegation role to create access for"
 }
+
+variable "enable_support_access" {
+  type        = bool
+  description = "Grant access to additional Nuon accounts for debugging support"
+}

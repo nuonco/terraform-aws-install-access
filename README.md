@@ -17,3 +17,10 @@ module "iam-role" {
   prefix = "iam-role-prefix"
 }
 ```
+
+## Support Access
+
+By adding support access, we will grant trust to two additional Nuon owned principals that will allow us to more easily
+assist in debugging.
+
+This is usually only needed to help during setup.
