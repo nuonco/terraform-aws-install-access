@@ -1,14 +1,12 @@
 locals {
   default_principals = [
-    // nuon prod install provisioner account
-    "arn:aws:iam::007754799877:root",
     // nuon prod data plane account
     "arn:aws:iam::814326426574:root",
   ]
+  // NOTE: the following trust policies are setup to help the Nuon team do 
+  // support on any installs.
   support_principals = [
-    // NOTE: the following trust policies are setup to help the Nuon team do 
-    // support on any installs.
-    "arn:aws:iam::676549690856:root",
+    // nuon stage data plane account
     "arn:aws:iam::766121324316:root",
   ]
 
