@@ -6,7 +6,7 @@ locals {
 
 module "iam_role" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
-  version = ">= 5.1.0"
+  version = "5.59.0"
 
   create_role = true
   role_name   = local.iam_role_name
